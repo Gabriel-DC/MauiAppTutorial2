@@ -1,4 +1,5 @@
-﻿using MauiAppTutorial2.Pages;
+﻿using MauiAppTutorial2.Mvvm.Views;
+using MauiAppTutorial2.Pages;
 
 namespace MauiAppTutorial2
 {
@@ -8,7 +9,7 @@ namespace MauiAppTutorial2
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ResourcesPage());
+            MainPage = new NavigationPage(new ProdutoView());
         }
     }
 }
