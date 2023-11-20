@@ -9,7 +9,7 @@ namespace MauiAppTutorial2
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ProdutoView());
+            MainPage = new NavigationPage(new CommandsView());
         }
     }
 }

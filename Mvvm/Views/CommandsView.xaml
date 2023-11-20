@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial2.Mvvm.Views.CommandsView"
+             Title="CommandsView">
+    <VerticalStackLayout>
+        
+        <Label 
+            Text="Button: Command"
+            FontSize="20"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Button
+            x:Name="BtnAlerta"
+            Text="Exibir Alerta"
+            Command="{Binding ButtonClickCommand}"/>
+
+        <SearchBar BackgroundColor="Aqua"
+                   x:Name="SearchBar"
+                   SearchCommand="{Binding SearchCommand}"
+                   SearchCommandParameter="{Binding Source={x:Reference SearchBar}, Path=Text}"/>
+
+    </VerticalStackLayout>
+</ContentPage>

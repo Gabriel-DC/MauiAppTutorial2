@@ -67,7 +67,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Mvvm\Views\CommandsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Mvvm\Views\ProdutoView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\TimesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ResourcesPage.xaml">
