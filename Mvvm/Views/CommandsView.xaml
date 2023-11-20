@@ -9,7 +9,7 @@
             Text="Button: Command"
             FontSize="20"
             FontAttributes="Bold"
-            VerticalOptions="Center" 
+            VerticalOptions="Center"
             HorizontalOptions="Center"/>
 
         <Button

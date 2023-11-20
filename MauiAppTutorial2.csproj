@@ -73,6 +73,9 @@
 	  <MauiXaml Update="Mvvm\Views\ProdutoView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Mvvm\Views\SaudacaoView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Mvvm\Views\TimesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
