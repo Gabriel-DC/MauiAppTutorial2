@@ -9,7 +9,7 @@ namespace MauiAppTutorial2
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SaudacaoView());
+            MainPage = new NavigationPage(new EnderecoView());
         }
     }
 }
