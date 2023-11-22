@@ -22,24 +22,28 @@
                        Text="{Binding Nome}"/>
 
                 <Label Grid.Row="1" Grid.Column="0"
+                       VerticalTextAlignment="Center"
                        Text="Sobrenome:"/>
 
                 <Entry Grid.Row="1" Grid.Column="1"
                        Text="{Binding Sobrenome}"/>
 
                 <Label Grid.Row="2" Grid.Column="0"
+                       VerticalTextAlignment="Center"
                        Text="Rua / Número:"/>
 
                 <Entry Grid.Row="2" Grid.Column="1"
                        Text="{Binding Rua}"/>
 
                 <Label Grid.Row="3" Grid.Column="0"
+                       VerticalTextAlignment="Center"
                        Text="Código Postal:"/>
 
                 <Entry Grid.Row="3" Grid.Column="1"
                        Text="{Binding Cep}"/>
 
                 <Label Grid.Row="4" Grid.Column="0"
+                       VerticalTextAlignment="Center"
                        Text="Cidade / Estado:"/>
 
                 <Entry Grid.Row="4" Grid.Column="1"
