@@ -2,82 +2,33 @@
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace MauiAppTutorial2.Mvvm.ViewModels
 {
-    public class EnderecoViewModel : INotifyPropertyChanged
-    {
-        public ICommand ImprimirEnderecoCommand { get; private set; }
+    //[INotifyPropertyChanged]
+    public partial class EnderecoViewModel : ObservableObject
+    {                
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(Endereco))]
+        private string? _nome;
 
-        public EnderecoViewModel()
-        {
-            ImprimirEnderecoCommand = new Command<string>(ImprimirEndereco);
-        }
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(Endereco))]
+        private string? _sobrenome;
 
-        private string _nome;
-        public string Nome
-        {
-            get => _nome;
-            set
-            {
-                if (SetField(ref _nome, value))
-                {
-                    OnPropertyChanged(nameof(Endereco));
-                }
-            }
-        }
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(Endereco))]
+        private string? _rua;
 
-        private string _sobrenome;
-        public string Sobrenome
-        {
-            get => _sobrenome;
-            set
-            {
-                if(SetField(ref  _sobrenome, value))
-                {
-                    OnPropertyChanged(nameof(Endereco));
-                }
-            }
-        }
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(Endereco))]
+        private string? _cep;
 
-        private string _rua;
-        public string Rua
-        {
-            get => _rua;
-            set
-            {
-                if (SetField(ref _rua, value))
-                {
-                    OnPropertyChanged(nameof(Endereco));
-                }
-            }
-        }
-
-        private string _cep;
-        public string Cep
-        {
-            get => _cep;
-            set
-            {
-                if (SetField(ref _cep, value))
-                {
-                    OnPropertyChanged(nameof(Endereco));
-                }
-            }
-        }
-
-        private string _cidade;
-        public string Cidade
-        {
-            get => _cidade;
-            set
-            {
-                if (SetField(ref _cidade, value))
-                {
-                    OnPropertyChanged(nameof(Endereco));
-                }
-            }
-        }
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(Endereco))]
+        private string? _cidade;
 
         public string Endereco {
             get
@@ -93,22 +44,8 @@ namespace MauiAppTutorial2.Mvvm.ViewModels
             }
         }
 
+        [RelayCommand]
         private void ImprimirEndereco(string endereco) 
-            => Application.Current.MainPage.DisplayAlert("Endereço", endereco, "Ok");
-
-        public void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        private bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null!)
-        {
-            if (EqualityComparer<T>.Default.Equals(field, value))
-                return false;
-
-            field = value;
-            OnPropertyChanged(propertyName);
-            return true;
-        }
+            => Application.Current.MainPage.DisplayAlert("Endereço", endereco, "Ok");                
     }
 }
