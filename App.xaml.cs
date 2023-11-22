@@ -15,7 +15,8 @@ namespace MauiAppTutorial2
             ServiceProvider serviceProvider = services.BuildServiceProvider();
             IAlunoService alunoService = serviceProvider.GetService<IAlunoService>();
 
-            MainPage = new NavigationPage(new AlunoNotasView(alunoService));
+            //MainPage = new NavigationPage(new AlunoNotasView(alunoService));
+            MainPage = new ExemploView();
         }
     }
 }
