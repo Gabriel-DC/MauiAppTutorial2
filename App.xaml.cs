@@ -1,5 +1,6 @@
 ﻿using MauiAppTutorial2.Mvvm.Views;
 using MauiAppTutorial2.Pages;
+using MauiAppTutorial2.Services;
 
 namespace MauiAppTutorial2
 {
@@ -8,8 +9,13 @@ namespace MauiAppTutorial2
         public App()
         {
             InitializeComponent();
+            ServiceCollection services = new();            
+            services.AddTransient<IAlunoService, AlunoService>();
 
-            MainPage = new NavigationPage(new EnderecoView());
+            ServiceProvider serviceProvider = services.BuildServiceProvider();
+            IAlunoService alunoService = serviceProvider.GetService<IAlunoService>();
+
+            MainPage = new NavigationPage(new AlunoNotasView(alunoService));
         }
     }
 }

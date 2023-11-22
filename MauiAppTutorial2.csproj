@@ -68,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Mvvm\Views\AlunoNotasView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Mvvm\Views\CommandsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial2.Mvvm.Views.AlunoNotasView"
+             xmlns:converters="clr-namespace:MauiAppTutorial2.Services"
+             Title="AlunoNotasView">
+
+    <ContentPage.Resources>
+        <converters:ConvertDoubleToColor x:Key="ColorConverter" />
+    </ContentPage.Resources>
+    
+    <ListView x:Name="ListViewAlunos" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10">
+
+                        <Label
+                            Text="{Binding Nome}"
+                            TextColor="Black"
+                            FontSize="30"
+                            HorizontalOptions="StartAndExpand"/>
+
+                        <Label
+                            Text="{Binding Nota}"
+                            TextColor="{Binding Nota, Converter={StaticResource ColorConverter}}"
+                            FontSize="30"
+                            FontAttributes="Bold"
+                            HorizontalOptions="EndAndExpand"/>
+
+                    </StackLayout>
+                    
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+    
+</ContentPage>
