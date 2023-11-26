@@ -11,7 +11,7 @@ public partial class AlunosPage : ContentPage
 
     private async void BtnDetalhes_Clicked(object sender, EventArgs e)
     {
-		AlunoViewModel viewModel = new AlunoViewModel
+		AlunoViewModel viewModel = new()
 		{
 			Name = TxtName.Text,
 			Email = TxtEmail.Text,
