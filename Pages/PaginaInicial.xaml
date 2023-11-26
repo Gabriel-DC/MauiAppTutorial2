@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial2.Pages.PaginaInicial"
+             Title="PaginaInicial">
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Padding="30"
+        Spacing="30">
+
+        <Button
+            Text="Ir para a página 2"
+            FontSize="20"
+            x:Name="BtnPaginaInicial"
+            Clicked="BtnPaginaInicial_Clicked"/>
+
+        <Button
+            Text="Ir para a página modal"
+            FontSize="20"
+            Background="Maroon"
+            x:Name="BtnPaginaModal"
+            Clicked="BtnPaginaModal_Clicked"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

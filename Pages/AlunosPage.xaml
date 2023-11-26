@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTutorial2.Pages.AlunosPage"
+             Title="AlunosPage">
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Spacing="30"
+        Padding="30">
+
+        <Entry
+            x:Name="TxtName"
+            FontSize="30"
+            Placeholder="Informe o nome"/>
+
+        <Entry
+            x:Name="TxtEmail"
+            FontSize="30"
+            Placeholder="Informe o Email"
+            Keyboard="Email"/>
+
+        <Entry
+            x:Name="TxtAge"
+            FontSize="30"
+            Placeholder="Informe a idade"
+            Keyboard="Numeric"/>
+        
+        <Button
+            x:Name="BtnDetalhes"
+            Text="Exibir Detalhes"
+            FontSize="30"
+            Clicked="BtnDetalhes_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

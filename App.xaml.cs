@@ -9,14 +9,14 @@ namespace MauiAppTutorial2
         public App()
         {
             InitializeComponent();
-            ServiceCollection services = new();            
-            services.AddTransient<IAlunoService, AlunoService>();
+            //ServiceCollection services = new();            
+            //services.AddTransient<IAlunoService, AlunoService>();
 
-            ServiceProvider serviceProvider = services.BuildServiceProvider();
-            IAlunoService alunoService = serviceProvider.GetService<IAlunoService>();
+            //ServiceProvider serviceProvider = services.BuildServiceProvider();
+            //IAlunoService alunoService = serviceProvider.GetService<IAlunoService>();
 
             //MainPage = new NavigationPage(new AlunoNotasView(alunoService));
-            MainPage = new ExemploView();
+            MainPage = new NavigationPage(new AlunosPage());
         }
     }
 }
